@@ -1,6 +1,7 @@
 # Charu Sharma — Java Full-Stack Developer Portfolio
 
 An immersive, highly interactive personal portfolio website inspired by the Slush design system and built with React, Three.js, and Tailwind CSS.
+Checkout my portfolio at https://charu-sharma.netlify.app/
 
 ## 🚀 Quick Deployment Options
 

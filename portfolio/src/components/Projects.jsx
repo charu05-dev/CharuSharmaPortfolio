@@ -73,6 +73,7 @@ export const Projects = () => {
 
                 {/* CTA Button */}
                 <div className="pt-4">
+                  <div className="flex flex-wrap gap-3">
                   <button
                     onClick={() => setSelectedProject(projects[0])}
                     className="flex items-center gap-2.5 px-6 py-3.5 bg-carbon text-paper rounded-pill font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000000] hover:shadow-[5px_5px_0px_#000000] hover:-translate-y-1 active:translate-y-0.5 transition-all"
@@ -80,6 +81,16 @@ export const Projects = () => {
                     <span>VIEW PROJECT DETAILS</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
+                  <a
+                    href={projects[0].liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 px-6 py-3.5 bg-paper text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000000] hover:shadow-[5px_5px_0px_#000000] hover:-translate-y-1 transition-all"
+                  >
+                    <span>OPEN LIVE SITE</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                </div>
                 </div>
               </div>
 

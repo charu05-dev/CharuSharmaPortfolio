@@ -161,6 +161,7 @@ export const Contact = ({ onTriggerToast }) => {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -175,6 +176,7 @@ export const Contact = ({ onTriggerToast }) => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -188,6 +190,7 @@ export const Contact = ({ onTriggerToast }) => {
                     PROJECT / MESSAGE
                   </label>
                   <textarea
+                    name="message"
                     rows={4}
                     required
                     value={formData.message}
@@ -197,9 +200,18 @@ export const Contact = ({ onTriggerToast }) => {
                   ></textarea>
                 </div>
 
+                {formError && (
+                  <p role="alert" className="rounded-card border border-red-700 bg-red-50 p-3 text-sm font-semibold text-red-800">
+                    {formError}
+                  </p>
+                )}
+
+
+
                 <button
                   type="submit"
-                  className="w-full py-4 bg-carbon text-paper rounded-pill border-[1.5px] border-carbon font-display font-black text-sm uppercase tracking-wider shadow-[4px_4px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] hover:-translate-y-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-carbon text-paper rounded-pill border-[1.5px] border-carbon font-display font-black text-sm uppercase tracking-wider shadow-[4px_4px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] hover:-translate-y-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-wait"
                 >
                   <Send className="w-4 h-4" />
                   <span>{isSubmitting ? "SENDING..." : "SEND MESSAGE"}</span>

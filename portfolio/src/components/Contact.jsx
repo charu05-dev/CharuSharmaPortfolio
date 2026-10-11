@@ -26,12 +26,15 @@ export const Contact = ({ onTriggerToast }) => {
     setFormError('');
     setIsSubmitting(true);
     try {
-      const payload = new URLSearchParams();
-      payload.append('form-name', 'contact');
-      Object.entries(formData).forEach(([key, value]) => payload.append(key, value));
+      const payload = new URLSearchParams({
+        'form-name': 'contact',
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      });
       const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
         body: payload.toString()
       });
       if (!response.ok) throw new Error('The form submission failed.');
@@ -84,28 +87,34 @@ export const Contact = ({ onTriggerToast }) => {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Email Pill Card */}
-            <div 
-              onClick={() => copyToClipboard(personalInfo.contact.email, "Email")}
-              className="group cursor-pointer bg-paper rounded-card border-[2px] border-carbon p-5 shadow-[4px_4px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] hover:-translate-y-1 transition-all"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-10 h-10 rounded-full bg-sunburst border border-carbon flex items-center justify-center">
+            <div className="group bg-paper rounded-card border-[2px] border-carbon p-5 shadow-[4px_4px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] hover:-translate-y-1 transition-all">
+              <div className="flex items-center justify-between gap-3">
+                <a
+                  href={`mailto:${personalInfo.contact.email}`}
+                  className="flex min-w-0 flex-1 items-center gap-3"
+                  aria-label={`Send an email to ${personalInfo.contact.email}`}
+                >
+                  <span className="w-10 h-10 shrink-0 rounded-full bg-sunburst border border-carbon flex items-center justify-center">
                     <Mail className="w-5 h-5 text-carbon" />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-[11px] font-black uppercase text-carbon/60 font-display">EMAIL ADDRESS</div>
-                    <div className="font-mono font-bold text-sm sm:text-base text-carbon break-all">
+                    <div className="font-mono font-bold text-sm sm:text-base text-carbon break-all group-hover:underline">
                       {personalInfo.contact.email}
                     </div>
+                    <div className="text-xs font-semibold text-carbon/60 mt-1">Click to compose an email</div>
                   </div>
-                </div>
-                <button className="p-2 rounded-full bg-mist border border-carbon group-hover:bg-sunburst transition-colors">
+                </a>
+                <button
+                  type="button"
+                  aria-label="Copy email address"
+                  onClick={() => copyToClipboard(personalInfo.contact.email, "Email")}
+                  className="shrink-0 p-2 rounded-full bg-mist border border-carbon hover:bg-sunburst transition-colors"
+                >
                   {copiedField === "Email" ? <Check className="w-4 h-4 text-carbon" /> : <Copy className="w-4 h-4 text-carbon" />}
                 </button>
               </div>
             </div>
-            
 
             {/* LinkedIn & GitHub Links */}
             <div className="grid grid-cols-2 gap-4">

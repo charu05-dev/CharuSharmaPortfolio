@@ -213,42 +213,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom Editorial Marquee Band */}
-      <div className="relative z-10 w-full overflow-hidden bg-sunburst border-t-[2px] border-carbon py-2.5 -mx-4 md:-mx-8 mt-10">
-        <div className="animate-marquee whitespace-nowrap flex items-center font-display font-black text-xs md:text-sm tracking-widest uppercase text-carbon">
-          <span className="mx-4">☕ JAVA FULL-STACK</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🍃 SPRING BOOT</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">⚛️ REACT</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🐬 MYSQL</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">⚡ RESTFUL APIS</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🔐 JWT AUTHENTICATION</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">📦 HIBERNATE ORM</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🏗️ MVC ARCHITECTURE</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">☕ JAVA FULL-STACK</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🍃 SPRING BOOT</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">⚛️ REACT</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🐬 MYSQL</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">⚡ RESTFUL APIS</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🔐 JWT AUTHENTICATION</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">📦 HIBERNATE ORM</span>
-          <span className="mx-4">•</span>
-          <span className="mx-4">🏗️ MVC ARCHITECTURE</span>
-        </div>
-      </div>
     </section>
   );
 };

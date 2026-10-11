@@ -5,8 +5,7 @@ export const personalInfo = {
   tagline: "Building scalable web applications with Java, Spring Boot, React and MySQL.",
   bio: "Information Technology graduate and Java Full-Stack Developer with experience building full-stack applications using Java, Spring Boot, React, MySQL, REST APIs, JWT, Hibernate, and related technologies.",
   contact: {
-    phone: "9310879213",
-    email: "charusharmadl1356@gmail.com",
+    email: "charu05.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/charush05",
     linkedinDisplay: "charush05",
     github: "https://github.com/charu05-dev",
@@ -58,6 +57,7 @@ export const heroStickers = [
 export const projects = [
   {
     id: "fashionselect",
+    liveUrl: "https://fashionstore-4bch.onrender.com",
     number: "01",
     title: "FASHIONSELECT",
     subtitle: "FASHION E-COMMERCE PLATFORM",

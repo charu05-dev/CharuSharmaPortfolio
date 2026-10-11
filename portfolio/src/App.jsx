@@ -5,7 +5,6 @@ import { About } from './components/About';
 import { TechStack } from './components/TechStack';
 import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
-import { EducationAchievement } from './components/EducationAchievement';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
@@ -42,10 +41,7 @@ export default function App() {
         {/* Section 5: Experience (#dceeff Sky Wash) */}
         <Experience />
 
-        {/* Section 6: Education & Achievements (#ffffff Paper White) */}
-        <EducationAchievement />
-
-        {/* Section 7: Contact (#dceeff Sky Wash) */}
+        {/* Contact (#dceeff Sky Wash) */}
         <Contact onTriggerToast={showToast} />
       </main>
 

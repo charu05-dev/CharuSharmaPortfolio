@@ -57,58 +57,64 @@ export const heroStickers = [
 export const projects = [
   {
     id: "fashionselect",
-    liveUrl: "https://fashionstore-4bch.onrender.com",
     number: "01",
     title: "FASHIONSELECT",
     subtitle: "FASHION E-COMMERCE PLATFORM",
     date: "Jan 2026",
     badge: "FULL STACK",
     bgAccent: "sunburst",
-    description: "A full-stack fashion e-commerce application built using Spring Boot and React, enabling users to browse products and interact with the application through RESTful APIs.",
+    liveUrl: "https://fashionstore-4bch.onrender.com/home",
+    githubUrl: "https://github.com/charu05-dev/FashionStore",
+    screenshot: "/images/projects/fashionselect-main.png",
+    videoUrl: null,
+    description: "A full-stack fashion e-commerce application built with Java, Spring Boot, React, and SQL, with product browsing and REST API integration.",
     details: [
-      "Developed a full-stack fashion e-commerce application using Spring Boot and React, enabling users to browse products and interact with the application through RESTful APIs.",
+      "Developed a fashion e-commerce application using Spring Boot and React, with product browsing and backend REST API integration.",
       "Implemented JWT-based authentication and authorization to secure user access and protect application endpoints.",
-      "Designed and integrated a SQL database with backend services to manage users, products, orders, and application data using structured CRUD operations."
+      "Designed SQL-backed CRUD operations for users, products, orders, and related application data."
     ],
     technologies: ["Java", "Spring Boot", "React", "SQL", "REST API", "JWT"],
     architecture: {
-      frontend: "React SPA with componentized catalog, product filter pills, shopping cart state, and protected checkout routes.",
-      backend: "Spring Boot RESTful micro-architecture with MVC controllers, service business logic, and security filter chains.",
-      security: "JWT stateless authentication tokens signed and validated per request.",
-      database: "MySQL relational schema tracking users, roles, apparel catalogs, inventories, and placed orders."
+      frontend: "React-based user interface for browsing the fashion catalog and interacting with product pages.",
+      backend: "Spring Boot backend exposing REST endpoints for application functionality.",
+      security: "JWT-based authentication and authorization for protected application resources.",
+      database: "SQL relational data management for users, products, orders, and related records."
     },
     mockupFeatures: [
-      { label: "CATALOG", value: "Curated Apparel Grid" },
-      { label: "AUTH", value: "JWT Bearer Token Guard" },
-      { label: "DATABASE", value: "Relational Order Management" }
+      { label: "CATALOG", value: "Product Browsing" },
+      { label: "AUTH", value: "JWT Authentication" },
+      { label: "DATABASE", value: "SQL CRUD Operations" }
     ]
   },
   {
-    id: "foodserve",
+    id: "codepath",
     number: "02",
-    title: "FOODSERVE",
-    subtitle: "ONLINE FOOD DELIVERY APPLICATION",
-    date: "May 2026",
-    badge: "FULL STACK",
+    title: "CODEPATH",
+    subtitle: "DSA LEARNING & ROADMAP PLATFORM",
+    date: "In Development",
+    badge: "IN DEVELOPMENT",
     bgAccent: "mint",
-    description: "A full-stack food service application built using Spring Boot and React, implementing RESTful APIs for seamless communication between frontend and backend.",
+    githubUrl: "https://github.com/charu05-dev/codepath",
+    screenshot: "/images/projects/codepath-main.png",
+    videoUrl: null,
+    description: "A DSA learning platform designed to organize coding practice with topic-wise roadmaps, progress analytics, and mistake tracking.",
     details: [
-      "Built a full-stack food service application using Spring Boot and React, implementing RESTful APIs for seamless communication between frontend and backend.",
-      "Implemented JWT authentication and authorization to provide secure user login and controlled access to application resources.",
-      "Integrated SQL database operations with backend business logic to manage users, food items, orders, and related application data efficiently."
+      "Building an interactive React and Vite frontend for a structured DSA learning experience, including dashboard, roadmap, practice, analytics, and mistake-tracking screens.",
+      "Organizing coding practice and topic progress so learners can review their learning activity and identify areas for improvement.",
+      "Planning a Java and Spring Boot backend, MySQL persistence, REST APIs, and LLM API integration for personalized roadmap generation."
     ],
-    technologies: ["Java", "Spring Boot", "React", "SQL", "REST API", "JWT"],
+    technologies: ["React", "JavaScript", "Vite", "CSS", "LocalStorage"],
+    plannedTechnologies: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL", "REST APIs", "LLM API"],
     architecture: {
-      pipeline: "FOOD → ORDER → API → DATABASE",
-      frontend: "React ordering interface with live cart calculations, category tabs, and order confirmation states.",
-      backend: "Spring Boot controllers orchestrating restaurant menus, cart validation, and transactional order dispatch.",
-      security: "JWT authentication with customer and admin access controls.",
-      database: "SQL database executing structured CRUD operations for dishes, active orders, customer profiles, and timestamps."
+      frontend: "Implemented frontend: React + Vite screens for the dashboard, roadmap, practice, analytics, mistake tracking, and settings.",
+      backend: "Planned: Java and Spring Boot REST APIs for application services and business logic.",
+      security: "Planned: Spring Security for authentication and access control when backend integration is implemented.",
+      database: "Planned: MySQL with Spring Data JPA and Hibernate for persistent user and learning-progress data."
     },
     mockupFeatures: [
-      { label: "FLOW", value: "Menu → Order → Cart → Dispatch" },
-      { label: "SECURITY", value: "Role-Based JWT Authorization" },
-      { label: "DATA", value: "Real-time SQL Order Tracking" }
+      { label: "LEARN", value: "Topic-Wise Roadmaps" },
+      { label: "PRACTICE", value: "DSA Problem Tracking" },
+      { label: "PROGRESS", value: "Analytics & Mistakes" }
     ]
   }
 ];

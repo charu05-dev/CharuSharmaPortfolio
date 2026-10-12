@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, ShoppingBag, Code2, ExternalLink, Github, PlayCircle } from 'lucide-react';
+import { ArrowUpRight, ShoppingBag, Code2, ExternalLink, PlayCircle } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 import { Sticker } from './Sticker';
 import { ProjectModal } from './ProjectModal';
@@ -12,7 +12,7 @@ const ProjectPreview = ({ project }) => (
         <span className="font-display font-black text-sm uppercase">{project.title} / PROJECT OVERVIEW</span>
       </div>
       <span className="px-2.5 py-1 bg-mint text-carbon border border-carbon rounded-full text-[10px] font-black uppercase">
-        {project.id === 'fashionselect' ? 'LIVE DEMO' : 'IN DEVELOPMENT'}
+        {project.id === 'fashionselect' ? 'LIVE DEMO' : 'PROJECT OVERVIEW'}
       </span>
     </div>
 
@@ -100,7 +100,7 @@ export const Projects = () => {
                       View project details <ArrowUpRight className="w-4 h-4" />
                     </button>
                     {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-paper text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000000] hover:shadow-[5px_5px_0px_#000000] hover:-translate-y-1 transition-all">Open live site <ArrowUpRight className="w-4 h-4" /></a>}
-                    {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-paper text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs sm:text-sm uppercase tracking-wider hover:-translate-y-1 transition-all"><Github className="w-4 h-4" /> Source code <ArrowUpRight className="w-4 h-4" /></a>}
+                    {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-3 bg-paper text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs sm:text-sm uppercase tracking-wider hover:-translate-y-1 transition-all"><Code2 className="w-4 h-4" /> Source code <ArrowUpRight className="w-4 h-4" /></a>}
                   </div>
                 </div>
                 <ProjectPreview project={project} />

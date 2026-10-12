@@ -77,7 +77,6 @@ export const Projects = () => {
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="px-3 py-1 bg-carbon text-paper font-display font-black text-xs uppercase rounded-pill">PROJECT {project.number}</span>
                     <span className="px-3 py-1 bg-sunburst text-carbon border border-carbon font-display font-black text-xs uppercase rounded-pill">{project.badge}</span>
-                    <span className="px-3 py-1 bg-paper text-carbon border border-carbon font-mono font-bold text-xs rounded-pill">{project.date}</span>
                   </div>
                   <h3 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-carbon uppercase tracking-tight leading-none break-words">{project.title}</h3>
                   <p className="font-display font-bold text-base sm:text-lg text-carbon/80 uppercase tracking-wide">{project.subtitle}</p>

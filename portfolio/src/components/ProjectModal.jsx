@@ -138,16 +138,29 @@ export const ProjectModal = ({ project, onClose }) => {
 
         {/* Footer Actions */}
         <div className="pt-6 border-t-[2px] border-carbon flex flex-wrap items-center justify-between gap-4">
-          <a
-            href={personalInfo.contact.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-carbon text-paper rounded-pill font-display font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#000000] hover:bg-carbon/90 hover:-translate-y-0.5 transition-all"
-          >
-            <TechLogo name="github" className="w-4 h-4" />
-            <span>EXPLORE CODE ON GITHUB</span>
-          </a>
-
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={project.githubUrl || personalInfo.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-carbon text-paper rounded-pill font-display font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#000000] hover:bg-carbon/90 hover:-translate-y-0.5 transition-all"
+            >
+              <TechLogo name="github" className="w-4 h-4" />
+              <span>EXPLORE CODE ON GITHUB</span>
+            </a>
+            {project.liveUrl && (
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-mint text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs uppercase tracking-wider hover:-translate-y-0.5 transition-all">
+                <ExternalLink className="w-4 h-4" />
+                <span>OPEN LIVE DEMO</span>
+              </a>
+            )}
+            {project.videoUrl && (
+              <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-sunburst text-carbon border-[1.5px] border-carbon rounded-pill font-display font-black text-xs uppercase tracking-wider hover:-translate-y-0.5 transition-all">
+                <ExternalLink className="w-4 h-4" />
+                <span>WATCH DEMO</span>
+              </a>
+            )}
+          </div>
           <button
             onClick={onClose}
             className="px-6 py-3 bg-mist text-carbon rounded-pill border-[1.5px] border-carbon font-display font-bold text-xs uppercase tracking-wider hover:bg-concrete transition-colors"

@@ -3,7 +3,7 @@ export const personalInfo = {
   name: "Charu Sharma",
   role: "Java Full-Stack Developer",
   tagline: "Building scalable web applications with Java, Spring Boot, React and MySQL.",
-  bio: "Information Technology graduate and Java Full-Stack Developer with experience building full-stack applications using Java, Spring Boot, React, MySQL, REST APIs, JWT, Hibernate, and related technologies.",
+  bio: "Java Full-Stack Developer with experience building full-stack applications using Java, Spring Boot, React, MySQL, REST APIs, JWT, Hibernate, and related technologies.",
   contact: {
     email: "charu05.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/charush05",

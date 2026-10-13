@@ -102,15 +102,15 @@ export const projects = [
     details: [
       "Building an interactive React and Vite frontend for a structured DSA learning experience, including dashboard, roadmap, practice, analytics, and mistake-tracking screens.",
       "Organizing coding practice and topic progress so learners can review their learning activity and identify areas for improvement.",
-      "Planning a Java and Spring Boot backend, MySQL persistence, REST APIs, and LLM API integration for personalized roadmap generation."
+      "Implemented a Java and Spring Boot backend, MySQL persistence, REST APIs, and LLM API integration for personalized roadmap generation."
     ],
     technologies: ["React", "JavaScript", "Vite", "CSS", "LocalStorage"],
     plannedTechnologies: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL", "REST APIs", "LLM API"],
     architecture: {
-      frontend: "Implemented frontend: React + Vite screens for the dashboard, roadmap, practice, analytics, mistake tracking, and settings.",
-      backend: "Planned: Java and Spring Boot REST APIs for application services and business logic.",
-      security: "Planned: Spring Security for authentication and access control when backend integration is implemented.",
-      database: "Planned: MySQL with Spring Data JPA and Hibernate for persistent user and learning-progress data."
+      frontend: "frontend: React + Vite screens for the dashboard, roadmap, practice, analytics, mistake tracking, and settings.",
+      backend: "Java and Spring Boot REST APIs for application services and business logic.",
+      security: "Spring Security for authentication and access control when backend integration is implemented.",
+      database: "MySQL with Spring Data JPA and Hibernate for persistent user and learning-progress data."
     },
     mockupFeatures: [
       { label: "LEARN", value: "Topic-Wise Roadmaps" },
